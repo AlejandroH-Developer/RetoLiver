@@ -17,6 +17,7 @@
 		49571D59242127640050E6C5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D58242127640050E6C5 /* SplashViewController.swift */; };
 		49571D5C242129DD0050E6C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D5B242129DD0050E6C5 /* MainViewController.swift */; };
 		49571D5E242137870050E6C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49571D5D242137870050E6C5 /* Podfile */; };
+		49F527E724215495007A8B4E /* UIViewController+Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527E624215495007A8B4E /* UIViewController+Instances.swift */; };
 		7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385E21A96206608B4063228 /* Pods_RetoLiver.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +55,8 @@
 		49571D4C24211D210050E6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49571D58242127640050E6C5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		49571D5B242129DD0050E6C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		49571D5D242137870050E6C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		49571D5D242137870050E6C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		49F527E624215495007A8B4E /* UIViewController+Instances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instances.swift"; sourceTree = "<group>"; };
 		4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.debug.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.debug.xcconfig"; sourceTree = "<group>"; };
 		C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.release.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				49571D3324211D210050E6C5 /* LaunchScreen.storyboard */,
 				49571D2E24211D200050E6C5 /* Main.storyboard */,
 				49571D5A242127690050E6C5 /* Controllers */,
+				49F527E8242154A2007A8B4E /* Utilities */,
 				49571D3624211D210050E6C5 /* Info.plist */,
 				49571D5D242137870050E6C5 /* Podfile */,
 			);
@@ -164,6 +167,14 @@
 				49571D5B242129DD0050E6C5 /* MainViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49F527E8242154A2007A8B4E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				49F527E624215495007A8B4E /* UIViewController+Instances.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F527E724215495007A8B4E /* UIViewController+Instances.swift in Sources */,
 				49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */,
 				49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */,
 				49571D59242127640050E6C5 /* SplashViewController.swift in Sources */,
