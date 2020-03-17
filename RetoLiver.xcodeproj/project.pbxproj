@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D2824211D200050E6C5 /* AppDelegate.swift */; };
+		49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D2A24211D200050E6C5 /* SceneDelegate.swift */; };
+		49571D3024211D200050E6C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49571D2E24211D200050E6C5 /* Main.storyboard */; };
+		49571D3224211D210050E6C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49571D3124211D210050E6C5 /* Assets.xcassets */; };
+		49571D3524211D210050E6C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49571D3324211D210050E6C5 /* LaunchScreen.storyboard */; };
+		49571D4024211D210050E6C5 /* RetoLiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D3F24211D210050E6C5 /* RetoLiverTests.swift */; };
+		49571D4B24211D210050E6C5 /* RetoLiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D4A24211D210050E6C5 /* RetoLiverUITests.swift */; };
+		49571D59242127640050E6C5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D58242127640050E6C5 /* SplashViewController.swift */; };
+		49571D5C242129DD0050E6C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D5B242129DD0050E6C5 /* MainViewController.swift */; };
+		49571D5E242137870050E6C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 49571D5D242137870050E6C5 /* Podfile */; };
+		7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385E21A96206608B4063228 /* Pods_RetoLiver.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49571D3C24211D210050E6C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49571D1D24211D200050E6C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49571D2424211D200050E6C5;
+			remoteInfo = RetoLiver;
+		};
+		49571D4724211D210050E6C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49571D1D24211D200050E6C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49571D2424211D200050E6C5;
+			remoteInfo = RetoLiver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1385E21A96206608B4063228 /* Pods_RetoLiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoLiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49571D2524211D200050E6C5 /* RetoLiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoLiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49571D2824211D200050E6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49571D2A24211D200050E6C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		49571D2F24211D200050E6C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49571D3124211D210050E6C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49571D3424211D210050E6C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49571D3624211D210050E6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49571D3B24211D210050E6C5 /* RetoLiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoLiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49571D3F24211D210050E6C5 /* RetoLiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoLiverTests.swift; sourceTree = "<group>"; };
+		49571D4124211D210050E6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49571D4624211D210050E6C5 /* RetoLiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetoLiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49571D4A24211D210050E6C5 /* RetoLiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetoLiverUITests.swift; sourceTree = "<group>"; };
+		49571D4C24211D210050E6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49571D58242127640050E6C5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		49571D5B242129DD0050E6C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		49571D5D242137870050E6C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.debug.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.debug.xcconfig"; sourceTree = "<group>"; };
+		C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.release.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49571D2224211D200050E6C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D3824211D210050E6C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D4324211D210050E6C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03E66D65C547B25E348AAD2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1385E21A96206608B4063228 /* Pods_RetoLiver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EEE1325AAACE4B11EDE94BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */,
+				C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		49571D1C24211D200050E6C5 = {
+			isa = PBXGroup;
+			children = (
+				49571D2724211D200050E6C5 /* RetoLiver */,
+				49571D3E24211D210050E6C5 /* RetoLiverTests */,
+				49571D4924211D210050E6C5 /* RetoLiverUITests */,
+				49571D2624211D200050E6C5 /* Products */,
+				1EEE1325AAACE4B11EDE94BD /* Pods */,
+				03E66D65C547B25E348AAD2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		49571D2624211D200050E6C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49571D2524211D200050E6C5 /* RetoLiver.app */,
+				49571D3B24211D210050E6C5 /* RetoLiverTests.xctest */,
+				49571D4624211D210050E6C5 /* RetoLiverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49571D2724211D200050E6C5 /* RetoLiver */ = {
+			isa = PBXGroup;
+			children = (
+				49571D3124211D210050E6C5 /* Assets.xcassets */,
+				49571D2824211D200050E6C5 /* AppDelegate.swift */,
+				49571D2A24211D200050E6C5 /* SceneDelegate.swift */,
+				49571D3324211D210050E6C5 /* LaunchScreen.storyboard */,
+				49571D2E24211D200050E6C5 /* Main.storyboard */,
+				49571D5A242127690050E6C5 /* Controllers */,
+				49571D3624211D210050E6C5 /* Info.plist */,
+				49571D5D242137870050E6C5 /* Podfile */,
+			);
+			path = RetoLiver;
+			sourceTree = "<group>";
+		};
+		49571D3E24211D210050E6C5 /* RetoLiverTests */ = {
+			isa = PBXGroup;
+			children = (
+				49571D3F24211D210050E6C5 /* RetoLiverTests.swift */,
+				49571D4124211D210050E6C5 /* Info.plist */,
+			);
+			path = RetoLiverTests;
+			sourceTree = "<group>";
+		};
+		49571D4924211D210050E6C5 /* RetoLiverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49571D4A24211D210050E6C5 /* RetoLiverUITests.swift */,
+				49571D4C24211D210050E6C5 /* Info.plist */,
+			);
+			path = RetoLiverUITests;
+			sourceTree = "<group>";
+		};
+		49571D5A242127690050E6C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49571D58242127640050E6C5 /* SplashViewController.swift */,
+				49571D5B242129DD0050E6C5 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49571D2424211D200050E6C5 /* RetoLiver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49571D4F24211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiver" */;
+			buildPhases = (
+				D33BBC0554B15D995AB50396 /* [CP] Check Pods Manifest.lock */,
+				49571D2124211D200050E6C5 /* Sources */,
+				49571D2224211D200050E6C5 /* Frameworks */,
+				49571D2324211D200050E6C5 /* Resources */,
+				1A85A2AC8AB015FC9960300F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RetoLiver;
+			productName = RetoLiver;
+			productReference = 49571D2524211D200050E6C5 /* RetoLiver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49571D3A24211D210050E6C5 /* RetoLiverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49571D5224211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiverTests" */;
+			buildPhases = (
+				49571D3724211D210050E6C5 /* Sources */,
+				49571D3824211D210050E6C5 /* Frameworks */,
+				49571D3924211D210050E6C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49571D3D24211D210050E6C5 /* PBXTargetDependency */,
+			);
+			name = RetoLiverTests;
+			productName = RetoLiverTests;
+			productReference = 49571D3B24211D210050E6C5 /* RetoLiverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49571D4524211D210050E6C5 /* RetoLiverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49571D5524211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiverUITests" */;
+			buildPhases = (
+				49571D4224211D210050E6C5 /* Sources */,
+				49571D4324211D210050E6C5 /* Frameworks */,
+				49571D4424211D210050E6C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49571D4824211D210050E6C5 /* PBXTargetDependency */,
+			);
+			name = RetoLiverUITests;
+			productName = RetoLiverUITests;
+			productReference = 49571D4624211D210050E6C5 /* RetoLiverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49571D1D24211D200050E6C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = AlejandroH;
+				TargetAttributes = {
+					49571D2424211D200050E6C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					49571D3A24211D210050E6C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 49571D2424211D200050E6C5;
+					};
+					49571D4524211D210050E6C5 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 49571D2424211D200050E6C5;
+					};
+				};
+			};
+			buildConfigurationList = 49571D2024211D200050E6C5 /* Build configuration list for PBXProject "RetoLiver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49571D1C24211D200050E6C5;
+			productRefGroup = 49571D2624211D200050E6C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49571D2424211D200050E6C5 /* RetoLiver */,
+				49571D3A24211D210050E6C5 /* RetoLiverTests */,
+				49571D4524211D210050E6C5 /* RetoLiverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49571D2324211D200050E6C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49571D3524211D210050E6C5 /* LaunchScreen.storyboard in Resources */,
+				49571D3224211D210050E6C5 /* Assets.xcassets in Resources */,
+				49571D5E242137870050E6C5 /* Podfile in Resources */,
+				49571D3024211D200050E6C5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D3924211D210050E6C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D4424211D210050E6C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A85A2AC8AB015FC9960300F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetoLiver/Pods-RetoLiver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RetoLiver/Pods-RetoLiver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RetoLiver/Pods-RetoLiver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D33BBC0554B15D995AB50396 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetoLiver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49571D2124211D200050E6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */,
+				49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */,
+				49571D59242127640050E6C5 /* SplashViewController.swift in Sources */,
+				49571D5C242129DD0050E6C5 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D3724211D210050E6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49571D4024211D210050E6C5 /* RetoLiverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49571D4224211D210050E6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49571D4B24211D210050E6C5 /* RetoLiverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49571D3D24211D210050E6C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49571D2424211D200050E6C5 /* RetoLiver */;
+			targetProxy = 49571D3C24211D210050E6C5 /* PBXContainerItemProxy */;
+		};
+		49571D4824211D210050E6C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49571D2424211D200050E6C5 /* RetoLiver */;
+			targetProxy = 49571D4724211D210050E6C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49571D2E24211D200050E6C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49571D2F24211D200050E6C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49571D3324211D210050E6C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49571D3424211D210050E6C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49571D4D24211D210050E6C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49571D4E24211D210050E6C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49571D5024211D210050E6C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49571D5124211D210050E6C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49571D5324211D210050E6C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiverTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetoLiver.app/RetoLiver";
+			};
+			name = Debug;
+		};
+		49571D5424211D210050E6C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiverTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetoLiver.app/RetoLiver";
+			};
+			name = Release;
+		};
+		49571D5624211D210050E6C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetoLiver;
+			};
+			name = Debug;
+		};
+		49571D5724211D210050E6C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RetoLiverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexh.RetoLiverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RetoLiver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49571D2024211D200050E6C5 /* Build configuration list for PBXProject "RetoLiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49571D4D24211D210050E6C5 /* Debug */,
+				49571D4E24211D210050E6C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49571D4F24211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49571D5024211D210050E6C5 /* Debug */,
+				49571D5124211D210050E6C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49571D5224211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49571D5324211D210050E6C5 /* Debug */,
+				49571D5424211D210050E6C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49571D5524211D210050E6C5 /* Build configuration list for PBXNativeTarget "RetoLiverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49571D5624211D210050E6C5 /* Debug */,
+				49571D5724211D210050E6C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49571D1D24211D200050E6C5 /* Project object */;
+}
