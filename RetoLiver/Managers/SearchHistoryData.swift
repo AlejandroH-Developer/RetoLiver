@@ -15,6 +15,7 @@ class SearchHistoryData: SearchHistoryDataProtocol {
     private let persistence: SearchHistoryPersistenceProtocol
     
     private var searches: [String]
+    private var maxSearches: Int = 10
     
     private init() {
         persistence = SearchHistoryKeyedArchiver()
@@ -63,12 +64,23 @@ extension SearchHistoryData {
         save()
     }
     
+    func clearHistory() {
+        clear()
+    }
+    
     func addSearch(_ search: String) {
         if let _: String = searches.first(where: { $0 == search }) {
             removeSearch(search)
-            return
         }
-        searches.insert(search, at: 0)
+        
+        self.searches.insert(search, at: 0)
+        
+        if searches.count > maxSearches {
+            searches.removeLast()
+        }
+        
+        //print(searches)
+        //print("add")
     }
     
     func removeSearch(_ search: String) {

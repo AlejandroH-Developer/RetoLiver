@@ -11,6 +11,7 @@ import Foundation
 protocol SearchHistoryDataProtocol {
     func loadHistory() -> [String]
     func saveHistory()
+    func clearHistory()
     func addSearch(_ search: String)
     func removeSearch(_ search: String)
 }
