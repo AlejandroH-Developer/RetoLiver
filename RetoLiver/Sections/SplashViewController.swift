@@ -24,7 +24,7 @@ extension SplashViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SearchHistoryData.shared.clearHistory()
+        //SearchHistoryData.shared.clearHistory()
         
     }
     
@@ -56,7 +56,7 @@ extension SplashViewController {
     }
     
     func goToMain() {
-        let navController: UINavigationController = SearchViewController.instanceFromStoryboard().addNavigationController()
+        let navController: UINavigationController = PLPViewController.instanceFromStoryboard().addNavigationController()
         self.presentViewController(navController, animated: true)
     }
     
