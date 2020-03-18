@@ -8,54 +8,70 @@
 
 import Foundation
 
-private let file_name = "SearchHistory.dat"
+private let file_name = "search_history_persistence.dat"
 
 class SearchHistoryKeyedArchiver: SearchHistoryPersistenceProtocol {
     
     func save(searches: [SearchDataModel]) {
+        
+        // Get file
+        guard let file = fileURL() else { return }
+        
+        // Convert model to persistence
         var persistence: [SearchHistoryPersistence] = []
         
         for data in searches {
             persistence.append(SearchHistoryPersistence(data: data))
         }
         
-        guard let file = fileURL() else { return }
-        
+        // Add to dictionary
         let dic = ["SearchHistoryPersistence": persistence] as [String:Any]
         
-        //NSKeyedArchiver.archiveRootObject(dic, toFile: file)
-        
-        if let archiveData = try? NSKeyedArchiver.archivedData(withRootObject: dic, requiringSecureCoding: true) {
-            try? archiveData.write(to: file)
+        // Archive in file
+        do {
+            let archiveData = try NSKeyedArchiver.archivedData(withRootObject: dic, requiringSecureCoding: false)
+            try archiveData.write(to: file)
+            print("Saved succesfully: \(archiveData) ")
+        } catch {
+            print(error)
         }
                 
     }
     
     func load() -> [SearchDataModel] {
         
+        // Get file
         guard let file = fileURL() else { return [] }
-        
-        //guard let data = NSKeyedUnarchiver.unarchiveObject(withFile: file.path) as? [String : Any] else {return []}
-        
-        guard let archivedData = try? Data(contentsOf: file), let persistence = (try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(archivedData)) as? [SearchHistoryPersistence] else {
+                
+        // Get persistence
+        guard
+            let archivedData = try? Data(contentsOf: file),
+            let persistence = (try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(archivedData)) as? [String:Any],
+            let searchPersistence = persistence["SearchHistoryPersistence"] as? [SearchHistoryPersistence]
+        else {
            return []
         }
-        
+                
+        // Convert persistence to model
         var searches: [SearchDataModel] = []
-        
-        for item in persistence {
+        for item in searchPersistence {
             searches.append(item.data)
         }
-
+        
         return searches
         
     }
     
     
     func clear() {
+        
+        // Get file
         guard let file = fileURL() else { return }
+        
+        // Validate file
         guard FileManager.default.fileExists(atPath: file.absoluteString) else { return }
         
+        // Remove file
         do {
             try FileManager.default.removeItem(at: file)
         }catch {
