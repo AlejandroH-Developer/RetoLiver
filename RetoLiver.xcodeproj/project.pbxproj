@@ -26,6 +26,9 @@
 		49F527F62421AB7E007A8B4E /* SearchHistoryPersistenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527F52421AB7E007A8B4E /* SearchHistoryPersistenceProtocol.swift */; };
 		49F527F82421B162007A8B4E /* SearchHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527F72421B162007A8B4E /* SearchHistoryData.swift */; };
 		49F527FA2421B1BD007A8B4E /* SearchHistoryDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527F92421B1BD007A8B4E /* SearchHistoryDataProtocol.swift */; };
+		49F527FE2421F317007A8B4E /* PLPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527FD2421F317007A8B4E /* PLPViewController.swift */; };
+		49F528002421FB81007A8B4E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527FF2421FB81007A8B4E /* ProductCell.swift */; };
+		49F5280324220F92007A8B4E /* ProductDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280224220F92007A8B4E /* ProductDataModel.swift */; };
 		7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385E21A96206608B4063228 /* Pods_RetoLiver.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		49F527F52421AB7E007A8B4E /* SearchHistoryPersistenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryPersistenceProtocol.swift; sourceTree = "<group>"; };
 		49F527F72421B162007A8B4E /* SearchHistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryData.swift; sourceTree = "<group>"; };
 		49F527F92421B1BD007A8B4E /* SearchHistoryDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryDataProtocol.swift; sourceTree = "<group>"; };
+		49F527FD2421F317007A8B4E /* PLPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPViewController.swift; sourceTree = "<group>"; };
+		49F527FF2421FB81007A8B4E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		49F5280224220F92007A8B4E /* ProductDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataModel.swift; sourceTree = "<group>"; };
 		4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.debug.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.debug.xcconfig"; sourceTree = "<group>"; };
 		C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.release.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				49571D58242127640050E6C5 /* SplashViewController.swift */,
+				49F528012421FBA4007A8B4E /* PLP */,
 				49F527F02421A163007A8B4E /* Search */,
 			);
 			path = Sections;
@@ -201,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				49F527EB24217DC5007A8B4E /* SearchDataModel.swift */,
+				49F5280224220F92007A8B4E /* ProductDataModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -231,6 +239,15 @@
 				49F527F92421B1BD007A8B4E /* SearchHistoryDataProtocol.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		49F528012421FBA4007A8B4E /* PLP */ = {
+			isa = PBXGroup;
+			children = (
+				49F527FD2421F317007A8B4E /* PLPViewController.swift */,
+				49F527FF2421FB81007A8B4E /* ProductCell.swift */,
+			);
+			path = PLP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +435,11 @@
 				49571D59242127640050E6C5 /* SplashViewController.swift in Sources */,
 				49F527F42421AB22007A8B4E /* SearchHistoryKeyedArchiver.swift in Sources */,
 				49F527F82421B162007A8B4E /* SearchHistoryData.swift in Sources */,
+				49F527FE2421F317007A8B4E /* PLPViewController.swift in Sources */,
 				49571D5C242129DD0050E6C5 /* SearchViewController.swift in Sources */,
 				49F527F22421A96F007A8B4E /* SearchHistoryPersistenceKeyedArchiverObjects.swift in Sources */,
+				49F528002421FB81007A8B4E /* ProductCell.swift in Sources */,
+				49F5280324220F92007A8B4E /* ProductDataModel.swift in Sources */,
 				49F527FA2421B1BD007A8B4E /* SearchHistoryDataProtocol.swift in Sources */,
 				49F527EC24217DC5007A8B4E /* SearchDataModel.swift in Sources */,
 			);
