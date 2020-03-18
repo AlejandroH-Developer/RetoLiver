@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableviewHeight: NSLayoutConstraint?
     
     // Properties
-    
+    var searches: [String] = []
 }
 
 
@@ -52,10 +52,20 @@ extension SearchViewController {
 extension SearchViewController {
     
     private func setUp() {
+        loadData()
     }
     
     private func configure() {
         self.textField.becomeFirstResponder()
+    }
+    
+    private func loadData() {
+        self.searches = SearchHistoryData.shared.loadHistory()
+        self.tableview.reloadData()
+    }
+    
+    private func reloadData() {
+        loadData()
     }
     
 }
@@ -65,10 +75,26 @@ extension SearchViewController {
 
 extension SearchViewController {
     
-    func searchProduct() {
-        self.textField.resignFirstResponder()
-        closeViewController(animated: true)
+    func search(_ criteria: String?) {
+        guard let text: String = criteria, !text.isEmpty else { return }
         print("Buscando producto")
+        SearchHistoryData.shared.addSearch(text)
+        SearchHistoryData.shared.saveHistory()
+        reloadData()
+    
+        //closeViewController(animated: true) {
+            
+        //prod}
+        
+    }
+    
+    func remove(_ criteria: String?) {
+        guard let text: String = criteria, !text.isEmpty else { return }
+        print("Búsqueda \(text) eliminada")
+        SearchHistoryData.shared.removeSearch(text)
+        SearchHistoryData.shared.saveHistory()
+        reloadData()
+        
     }
     
 }
@@ -79,7 +105,7 @@ extension SearchViewController {
 extension SearchViewController {
     
     @IBAction private func didPressSearchProduct(_ sender: UIButton) {
-        searchProduct()
+        search(textField.text)
     }
     
 }
@@ -90,7 +116,7 @@ extension SearchViewController {
 extension SearchViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchProduct()
+        search(textField.text)
         return true
     }
     
@@ -105,11 +131,13 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: Datasource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return searches.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! SearchCell
+        let criteria: String = searches[indexPath.row]
+        cell.setUp(target: self, criteria: criteria)
         return cell
     }
     
@@ -126,9 +154,21 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        searchProduct()
+        let criteria: String = searches[indexPath.row]
+        search(criteria)
     }
     
+}
+
+
+
+// MARK: - SearchCell methods
+
+extension SearchViewController: SearchCellDelegate {
+    
+    func remove(criteria: String) {
+        remove(criteria)
+    }
     
     
 }
