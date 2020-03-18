@@ -50,6 +50,8 @@ class PLPDataDummy: PLPDataProtocol {
             
             completion(.successful(products: [product1, product2, product3, product4, product5]))
             
+            //completion(.failure(message: "Hubo un error al cargar datos"))
+            
         }
         
     }

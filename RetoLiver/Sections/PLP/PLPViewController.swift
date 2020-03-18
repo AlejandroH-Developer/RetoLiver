@@ -11,11 +11,13 @@ import UIKit
 class PLPViewController: UIViewController {
     
     // Outlets
-    @IBOutlet weak var collectioView: UICollectionView!
+    @IBOutlet weak var tableview: UITableView!
     
     // Properties
     let plp: PLP = Manager.shared.plp
     var products: [ProductDataModel] = []
+    
+    private let spacing:CGFloat = 16.0
     
 }
 
@@ -44,6 +46,10 @@ extension PLPViewController {
 
 extension PLPViewController {
     
+    func setUp() {
+        
+    }
+    
     func configure() {
         loadData()
     }
@@ -52,9 +58,9 @@ extension PLPViewController {
     func loadData() {
         
         downloadProducts {
-            self.collectioView.reloadData()
-            self.collectioView.setContentOffset(.zero, animated: false)
-            self.collectioView.isHidden = self.products.isEmpty
+            self.tableview.reloadData()
+            self.tableview.setContentOffset(.zero, animated: false)
+            self.tableview.isHidden = self.products.isEmpty
         }
         
     }
@@ -79,6 +85,7 @@ extension PLPViewController {
                 
             case .fail(let message):
                 print(message)
+                self.showMessage(message, actionTitle: "Aceptar")
 
             }
          
@@ -108,28 +115,24 @@ extension PLPViewController {
 
 // MARK: - CollectionView methods
 
-extension PLPViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
     
     // Datasource
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item: ProductCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
-        return item
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ProductCell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
+        let product: ProductDataModel = products[indexPath.item]
+        cell.setUp(product: product)
+        return cell
     }
-    
-    // Layout
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = (collectionView.bounds.size.width / 2)
-        let height: CGFloat = 1.4 * width
-        return CGSize(width: width, height: height)
-    }
-    
-    
+        
+  
     // Delegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
 }

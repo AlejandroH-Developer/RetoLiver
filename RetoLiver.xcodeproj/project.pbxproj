@@ -34,6 +34,8 @@
 		49F5280A2422165D007A8B4E /* PLPDataDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F528092422165D007A8B4E /* PLPDataDummy.swift */; };
 		49F5280C24221C21007A8B4E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280B24221C21007A8B4E /* Manager.swift */; };
 		49F5280E242221D0007A8B4E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */; };
+		49F52810242234F1007A8B4E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280F242234F1007A8B4E /* LoadingView.swift */; };
+		49F5281224223507007A8B4E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F5281124223507007A8B4E /* LoadingView.xib */; };
 		7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385E21A96206608B4063228 /* Pods_RetoLiver.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		49F528092422165D007A8B4E /* PLPDataDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPDataDummy.swift; sourceTree = "<group>"; };
 		49F5280B24221C21007A8B4E /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		49F5280F242234F1007A8B4E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		49F5281124223507007A8B4E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.debug.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.debug.xcconfig"; sourceTree = "<group>"; };
 		C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.release.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +170,8 @@
 				49571D2A24211D200050E6C5 /* SceneDelegate.swift */,
 				49571D3324211D210050E6C5 /* LaunchScreen.storyboard */,
 				49571D2E24211D200050E6C5 /* Main.storyboard */,
+				49F5280F242234F1007A8B4E /* LoadingView.swift */,
+				49F5281124223507007A8B4E /* LoadingView.xib */,
 				49F527ED24217DCA007A8B4E /* DataModel */,
 				49F527FB2421BC80007A8B4E /* Persistence */,
 				49F527FC2421BCB0007A8B4E /* Managers */,
@@ -383,6 +389,7 @@
 				49571D3224211D210050E6C5 /* Assets.xcassets in Resources */,
 				49571D5E242137870050E6C5 /* Podfile in Resources */,
 				49571D3024211D200050E6C5 /* Main.storyboard in Resources */,
+				49F5281224223507007A8B4E /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +459,7 @@
 				49F527E724215495007A8B4E /* UIViewController+Instances.swift in Sources */,
 				49F527F62421AB7E007A8B4E /* SearchHistoryPersistenceProtocol.swift in Sources */,
 				49F527EF2421A15C007A8B4E /* SearchCell.swift in Sources */,
+				49F52810242234F1007A8B4E /* LoadingView.swift in Sources */,
 				49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */,
 				49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */,
 				49F527EA242179A4007A8B4E /* UITextField+Placeholder.swift in Sources */,
