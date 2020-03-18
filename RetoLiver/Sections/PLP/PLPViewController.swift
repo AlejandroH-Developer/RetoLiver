@@ -42,6 +42,7 @@ extension PLPViewController {
     
 }
 
+
 // MARK: - Setup
 
 extension PLPViewController {
@@ -98,6 +99,7 @@ extension PLPViewController {
     
     func goToSearch() {
         let controller: SearchViewController = SearchViewController.instanceFromStoryboard() as! SearchViewController
+        controller.delegate = self
         self.presentViewController(controller, animated: true)
     }
     
@@ -136,6 +138,17 @@ extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
     // Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+}
+
+
+// MARK: SearchController delegate
+
+extension PLPViewController: SearchControllerDelegate {
+    
+    func dismiss() {
+        configure()
     }
     
 }

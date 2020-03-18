@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo60" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-84-KvN">
-                                                <rect key="frame" x="139" y="0.0" width="136" height="60"/>
+                                                <rect key="frame" x="71" y="-30" width="272" height="120"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnS-mf-vPW">
                                                 <rect key="frame" x="354" y="0.0" width="60" height="60"/>
@@ -265,7 +265,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo60" translatesAutoresizingMaskIntoConstraints="NO" id="U3l-wv-1Fy">
-                                                <rect key="frame" x="139" y="0.0" width="136" height="60"/>
+                                                <rect key="frame" x="71" y="-30" width="272" height="120"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
