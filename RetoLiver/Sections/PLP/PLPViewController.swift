@@ -57,7 +57,10 @@ extension PLPViewController {
 
     func loadData() {
         
+        LoadingView.shared().show()
         downloadProducts {
+            LoadingView.shared().remove()
+            
             self.tableview.reloadData()
             self.tableview.setContentOffset(.zero, animated: false)
             self.tableview.isHidden = self.products.isEmpty
