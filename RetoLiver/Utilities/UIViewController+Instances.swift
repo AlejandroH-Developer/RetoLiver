@@ -22,7 +22,9 @@ extension UIViewController {
     
     class func instanceFromStoryboard(_ storyboard: StoryboardFile = .Main) -> UIViewController {
         let identifier: String = String(describing: self)
-        return instanceFromStoryboard(storyboard, withIdentifier: identifier)
+        let controller: UIViewController = instanceFromStoryboard(storyboard, withIdentifier: identifier)
+        controller.setNeedsStatusBarAppearanceUpdate()
+        return controller
     }
     
     class func instanceFromStoryboard(_ storyboard: StoryboardFile, withIdentifier identifier: String) -> UIViewController {
@@ -58,6 +60,26 @@ extension UIViewController {
         controller.modalPresentationStyle = style
         self.navigationController?.pushViewController(controller, animated: animated)
         completion?()
+    }
+    
+}
+
+
+// MARK: - Close
+
+extension UIViewController {
+    
+    func closeViewController(animated: Bool, completion: (()->())? = nil) {
+        self.view.endEditing(true)
+        
+        guard let navigation: UINavigationController = self.navigationController else {
+            self.dismiss(animated: animated, completion: completion)
+            return
+        }
+        
+        navigation.popViewController(animated: animated)
+        completion?()
+        
     }
     
 }
