@@ -11,9 +11,12 @@ import UIKit
 class PLPViewController: UIViewController {
     
     // Outlets
-    @IBOutlet weak var deploySearchButton: UIButton!
     @IBOutlet weak var collectioView: UICollectionView!
-   
+    
+    // Properties
+    let plp: PLP = Manager.shared.plp
+    var products: [ProductDataModel] = []
+    
 }
 
 
@@ -27,6 +30,7 @@ extension PLPViewController {
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        configure()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,10 +40,51 @@ extension PLPViewController {
     
 }
 
+// MARK: - Setup
+
+extension PLPViewController {
+    
+    func configure() {
+        loadData()
+    }
+    
+
+    func loadData() {
+        
+        downloadProducts {
+            self.collectioView.reloadData()
+            self.collectioView.setContentOffset(.zero, animated: false)
+            self.collectioView.isHidden = self.products.isEmpty
+        }
+        
+    }
+    
+    
+}
+
 
 // MARK: - Methods
 
 extension PLPViewController {
+    
+    func downloadProducts(completion: @escaping (()->())) {
+        
+        plp.getProducts { (result) in
+            
+            switch result {
+                
+            case .success(let products):
+                self.products = products
+                completion()
+                
+            case .fail(let message):
+                print(message)
+
+            }
+         
+        }
+        
+    }
     
     func goToSearch() {
         let controller: SearchViewController = SearchViewController.instanceFromStoryboard() as! SearchViewController
@@ -47,6 +92,7 @@ extension PLPViewController {
     }
     
 }
+
 
 
 // MARK: - Actions
@@ -66,7 +112,7 @@ extension PLPViewController: UICollectionViewDataSource, UICollectionViewDelegat
     
     // Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
