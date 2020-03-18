@@ -32,7 +32,7 @@ extension PLPViewController {
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configure()
+        setUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,18 +48,14 @@ extension PLPViewController {
 extension PLPViewController {
     
     func setUp() {
-        
+        loadData(criteria: "mas buscado")
     }
-    
-    func configure() {
-        loadData()
-    }
-    
 
-    func loadData() {
+
+    func loadData(criteria: String) {
         
         LoadingView.shared().show()
-        downloadProducts {
+        downloadProducts(criteria: criteria) {
             LoadingView.shared().remove()
             
             self.tableview.reloadData()
@@ -77,9 +73,9 @@ extension PLPViewController {
 
 extension PLPViewController {
     
-    func downloadProducts(completion: @escaping (()->())) {
+    func downloadProducts(criteria: String, completion: @escaping (()->())) {
         
-        plp.getProducts { (result) in
+        plp.getProducts(criteria: criteria) { (result) in
             
             switch result {
                 
@@ -90,6 +86,7 @@ extension PLPViewController {
             case .fail(let message):
                 print(message)
                 self.showMessage(message, actionTitle: "Aceptar")
+                completion()
 
             }
          
@@ -147,8 +144,9 @@ extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension PLPViewController: SearchControllerDelegate {
     
-    func dismiss() {
-        configure()
+    func didSelect(criteria: String) {
+        loadData(criteria: criteria)
     }
+   
     
 }

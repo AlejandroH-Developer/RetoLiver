@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Protocol
 
 protocol SearchControllerDelegate: class {
-    func dismiss()
+    func didSelect(criteria: String)
 }
 
 
@@ -86,7 +86,7 @@ extension SearchViewController {
     func search(_ criteria: String?) {
         guard let text: String = criteria, !text.isEmpty else { return }
         print("Buscando producto")
-        self.delegate?.dismiss()
+        self.delegate?.didSelect(criteria: text)
         SearchHistoryData.shared.addSearch(text)
         closeViewController(animated: true) {
             SearchHistoryData.shared.saveHistory()

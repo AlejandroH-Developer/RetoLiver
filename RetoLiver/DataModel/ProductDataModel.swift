@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PriceType {
+enum PriceType: Int {
     case list
     case promo
 }

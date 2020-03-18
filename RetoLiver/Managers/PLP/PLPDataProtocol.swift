@@ -20,5 +20,5 @@ enum PLPDataResult {
 // MARK: - Protocol
 
 protocol PLPDataProtocol {
-    func getPLP(completion: @escaping ((PLPDataResult) -> ()))
+    func getPLP(criteria: String, completion: @escaping ((PLPDataResult) -> ()))
 }

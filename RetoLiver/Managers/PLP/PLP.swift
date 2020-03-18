@@ -25,7 +25,7 @@ class PLP {
     private var products: [ProductDataModel] = []
     
     init() {
-        data = PLPDataDummy()
+        data = PLPWebService() //PLPDataDummy()
     }
     
 }
@@ -35,14 +35,14 @@ class PLP {
 
 extension PLP {
     
-    func getProducts(completion: @escaping ((_ result: PLPResult) -> ())) {
+    func getProducts(criteria: String, completion: @escaping ((_ result: PLPResult) -> ())) {
         
         if !products.isEmpty {
             completion(.success(products: products))
             return
         }
         
-        data.getPLP { (result) in
+        data.getPLP(criteria: criteria) { (result) in
             
             switch result {
                 

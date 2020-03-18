@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProductCell: UITableViewCell {
     
     // Outlets
+    @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var listPriceLabel: UILabel!
@@ -47,10 +49,19 @@ extension ProductCell {
     }
     
     private func loadViews() {
-        self.idLabel.text = product.id
+        self.idLabel.text = "SKU: " + product.id
         self.nameLabel.text = product.name
-        self.listPriceLabel.text = ""
-        self.promoPriceLabel.text = ""
+        self.listPriceLabel.text = product.listPrice.toString()
+        self.promoPriceLabel.text = product.promoPrice.toString()
+        self.thumbnail.downloadImage(product.imageURL)
     }
     
+}
+
+
+
+extension Float {
+    func toString(decimals: Int = 2) -> String {
+        return String(format: "$ %.\(decimals)f", self)
+    }
 }
