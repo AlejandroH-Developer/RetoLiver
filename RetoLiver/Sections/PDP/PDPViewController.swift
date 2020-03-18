@@ -1,5 +1,5 @@
 //
-//  ProductCell.swift
+//  PDPViewController.swift
 //  RetoLiver
 //
 //  Created by AlejandroH on 18/03/20.
@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 
-class ProductCell: UITableViewCell {
+class PDPViewController: UIViewController {
     
     // Outlets
     @IBOutlet weak var thumbnail: UIImageView!
@@ -20,31 +19,31 @@ class ProductCell: UITableViewCell {
     
     // Properties
     var product: ProductDataModel!
+    
 }
 
 
-// MARK: - Cell methods
+// MARK: - Controller methods
 
-extension ProductCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+extension PDPViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configure()
     }
-
+    
 }
 
 
 // MARK: - Setup
 
-extension ProductCell {
+extension PDPViewController {
     
-    func setUp(product: ProductDataModel) {
-        self.product = product
+    func configure() {
         loadViews()
     }
     
@@ -60,9 +59,12 @@ extension ProductCell {
 
 
 
-extension Double {
-    func toString(decimals: Int = 2) -> String {
-        if self == 0 { return "" }
-        return String(format: "$ %.\(decimals)f", self)
+// MARK: - Actions
+
+extension PDPViewController {
+    
+    @IBAction private func didPressClose(_ sender: UIButton) {
+        closeViewController(animated: true)
     }
+    
 }

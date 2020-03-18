@@ -11,8 +11,10 @@ import UIKit
 class PLPViewController: UIViewController {
     
     // Outlets
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableview: UITableView!
-    
+    @IBOutlet weak var warningLabel: UILabel!
+
     // Properties
     let plp: PLP = Manager.shared.plp
     var products: [ProductDataModel] = []
@@ -54,6 +56,8 @@ extension PLPViewController {
 
     func loadData(criteria: String) {
         
+        self.textField.text = criteria
+        
         LoadingView.shared().show()
         downloadProducts(criteria: criteria) {
             LoadingView.shared().remove()
@@ -61,6 +65,7 @@ extension PLPViewController {
             self.tableview.reloadData()
             self.tableview.setContentOffset(.zero, animated: false)
             self.tableview.isHidden = self.products.isEmpty
+            self.warningLabel.isHidden = !self.tableview.isHidden
         }
         
     }
@@ -100,6 +105,11 @@ extension PLPViewController {
         self.presentViewController(controller, animated: true)
     }
     
+    func goToPDP(product: ProductDataModel) {
+        let controller: PDPViewController = PDPViewController.instanceFromStoryboard() as! PDPViewController
+        controller.product = product
+        self.pushViewController(controller, animated: true)
+    }
 }
 
 
@@ -134,7 +144,8 @@ extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
   
     // Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let product: ProductDataModel = products[indexPath.item]
+        goToPDP(product: product)
     }
     
 }
@@ -148,5 +159,4 @@ extension PLPViewController: SearchControllerDelegate {
         loadData(criteria: criteria)
     }
    
-    
 }

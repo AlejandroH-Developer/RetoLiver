@@ -27,25 +27,25 @@ class PLPWebService: PLPDataProtocol {
             
             guard response.result.isSuccess else {
                 print("Error")
-                completion(.failure(message: "Hubo un error 1"))
+                completion(.failure(message: "Hubo un error al realizar la petición"))
                 return
             }
             
             guard let value = response.result.value as? [String:Any] else {
                 print("Error")
-                completion(.failure(message: "Hubo un error 2"))
+                completion(.failure(message: "Error en repsonse"))
                 return
             }
             
             guard let results = value["plpResults"] as? [String:Any] else {
                 print("Error")
-                completion(.failure(message: "Hubo un error 3"))
+                completion(.failure(message: "No existe listado de productos"))
                 return
             }
             
             guard let records = results["records"] as? [[String:Any]] else {
                 print("Error")
-                completion(.failure(message: "Hubo un error 4"))
+                completion(.failure(message: "No existe listado de productos"))
                 return
             }
             

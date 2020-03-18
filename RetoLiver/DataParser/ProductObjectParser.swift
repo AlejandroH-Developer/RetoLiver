@@ -13,27 +13,27 @@ class ProductObjectParser {
     static func parse(dic: [String:Any]) -> ProductDataModel? {
         
         guard let id: String = dic["productId"] as? String else {
-            print("productId")
+            print("Error productId")
             return nil
         }
         
         guard let name: String = dic["productDisplayName"] as? String else {
-            print("productDisplayName")
+            print("Error productDisplayName")
             return nil
         }
         
         guard let imageURL: String = dic["smImage"] as? String else {
-            print("smImage")
+            print("Error smImage")
             return nil
         }
         
-        guard let listPrice: Float = dic["listPrice"] as? Float else {
-            print("listPrice")
+        guard let listPrice: Double = dic["listPrice"] as? Double else {
+            print("Error listPrice")
             return nil
         }
         
-        guard let promoPrice: Float = dic["promoPrice"] as? Float else {
-            print("promoPrice")
+        guard let promoPrice: Double = dic["promoPrice"] as? Double else {
+            print("Error promoPrice")
             return nil
         }
         

@@ -70,6 +70,7 @@ extension SearchViewController {
     private func loadData() {
         self.searches = SearchHistoryData.shared.loadHistory()
         self.tableview.reloadData()
+        self.tableview.isUserInteractionEnabled = !searches.isEmpty
     }
     
     private func reloadData() {
