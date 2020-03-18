@@ -24,7 +24,7 @@ extension SplashViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        SearchHistoryData.shared.clearHistory()
         
     }
     
