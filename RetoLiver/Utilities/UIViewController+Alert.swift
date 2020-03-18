@@ -15,6 +15,7 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (_) in
             completion?()
         }))
+        alert.view.tintColor = UIColor(named: "main_color")
         self.presentViewController(alert, animated: true)
     }
     

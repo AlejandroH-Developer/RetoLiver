@@ -11,8 +11,10 @@ import UIKit
 class PLPViewController: UIViewController {
     
     // Outlets
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableview: UITableView!
-    
+    @IBOutlet weak var warningLabel: UILabel!
+
     // Properties
     let plp: PLP = Manager.shared.plp
     var products: [ProductDataModel] = []
@@ -32,7 +34,7 @@ extension PLPViewController {
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configure()
+        setUp()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,23 +50,22 @@ extension PLPViewController {
 extension PLPViewController {
     
     func setUp() {
-        
+        loadData(criteria: "mas buscado")
     }
-    
-    func configure() {
-        loadData()
-    }
-    
 
-    func loadData() {
+
+    func loadData(criteria: String) {
+        
+        self.textField.text = criteria
         
         LoadingView.shared().show()
-        downloadProducts {
+        downloadProducts(criteria: criteria) {
             LoadingView.shared().remove()
             
             self.tableview.reloadData()
             self.tableview.setContentOffset(.zero, animated: false)
             self.tableview.isHidden = self.products.isEmpty
+            self.warningLabel.isHidden = !self.tableview.isHidden
         }
         
     }
@@ -77,9 +78,9 @@ extension PLPViewController {
 
 extension PLPViewController {
     
-    func downloadProducts(completion: @escaping (()->())) {
+    func downloadProducts(criteria: String, completion: @escaping (()->())) {
         
-        plp.getProducts { (result) in
+        plp.getProducts(criteria: criteria) { (result) in
             
             switch result {
                 
@@ -90,6 +91,7 @@ extension PLPViewController {
             case .fail(let message):
                 print(message)
                 self.showMessage(message, actionTitle: "Aceptar")
+                completion()
 
             }
          
@@ -103,6 +105,11 @@ extension PLPViewController {
         self.presentViewController(controller, animated: true)
     }
     
+    func goToPDP(product: ProductDataModel) {
+        let controller: PDPViewController = PDPViewController.instanceFromStoryboard() as! PDPViewController
+        controller.product = product
+        self.pushViewController(controller, animated: true)
+    }
 }
 
 
@@ -137,7 +144,8 @@ extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
   
     // Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let product: ProductDataModel = products[indexPath.item]
+        goToPDP(product: product)
     }
     
 }
@@ -147,8 +155,8 @@ extension PLPViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension PLPViewController: SearchControllerDelegate {
     
-    func dismiss() {
-        configure()
+    func didSelect(criteria: String) {
+        loadData(criteria: criteria)
     }
-    
+   
 }

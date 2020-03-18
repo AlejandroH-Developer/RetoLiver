@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4941160024223CCD002403E4 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494115FE24223CCD002403E4 /* LoadingView.xib */; };
 		4941160124223CCD002403E4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494115FF24223CCD002403E4 /* LoadingView.swift */; };
+		49411604242243EE002403E4 /* PLPWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49411603242243EE002403E4 /* PLPWebService.swift */; };
+		4941160624224AE6002403E4 /* ProductObjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941160524224AE6002403E4 /* ProductObjectParser.swift */; };
+		4941160824225620002403E4 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941160724225620002403E4 /* UIImageView+Utils.swift */; };
+		4941160A24227477002403E4 /* PDPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941160924227477002403E4 /* PDPViewController.swift */; };
 		49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D2824211D200050E6C5 /* AppDelegate.swift */; };
 		49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49571D2A24211D200050E6C5 /* SceneDelegate.swift */; };
 		49571D3024211D200050E6C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49571D2E24211D200050E6C5 /* Main.storyboard */; };
@@ -61,6 +65,10 @@
 		1385E21A96206608B4063228 /* Pods_RetoLiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetoLiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		494115FE24223CCD002403E4 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		494115FF24223CCD002403E4 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		49411603242243EE002403E4 /* PLPWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPWebService.swift; sourceTree = "<group>"; };
+		4941160524224AE6002403E4 /* ProductObjectParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductObjectParser.swift; sourceTree = "<group>"; };
+		4941160724225620002403E4 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		4941160924227477002403E4 /* PDPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPViewController.swift; sourceTree = "<group>"; };
 		49571D2524211D200050E6C5 /* RetoLiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetoLiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49571D2824211D200050E6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49571D2A24211D200050E6C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +169,30 @@
 			path = PLP;
 			sourceTree = "<group>";
 		};
+		4941160B24227A03002403E4 /* DataParser */ = {
+			isa = PBXGroup;
+			children = (
+				4941160524224AE6002403E4 /* ProductObjectParser.swift */,
+			);
+			path = DataParser;
+			sourceTree = "<group>";
+		};
+		4941160C24227A12002403E4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				49411603242243EE002403E4 /* PLPWebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4941160D24227A26002403E4 /* PDP */ = {
+			isa = PBXGroup;
+			children = (
+				4941160924227477002403E4 /* PDPViewController.swift */,
+			);
+			path = PDP;
+			sourceTree = "<group>";
+		};
 		49571D1C24211D200050E6C5 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +223,8 @@
 				49571D2A24211D200050E6C5 /* SceneDelegate.swift */,
 				49571D3324211D210050E6C5 /* LaunchScreen.storyboard */,
 				49571D2E24211D200050E6C5 /* Main.storyboard */,
+				4941160C24227A12002403E4 /* Service */,
+				4941160B24227A03002403E4 /* DataParser */,
 				494115FD24223CCD002403E4 /* LodingView */,
 				49F527ED24217DCA007A8B4E /* DataModel */,
 				49F527FB2421BC80007A8B4E /* Persistence */,
@@ -227,6 +261,7 @@
 				49571D58242127640050E6C5 /* SplashViewController.swift */,
 				49F528012421FBA4007A8B4E /* PLP */,
 				49F527F02421A163007A8B4E /* Search */,
+				4941160D24227A26002403E4 /* PDP */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -238,6 +273,7 @@
 				49F527E9242179A4007A8B4E /* UITextField+Placeholder.swift */,
 				49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */,
 				49F5281324223831007A8B4E /* UIView+Utils.swift */,
+				4941160724225620002403E4 /* UIImageView+Utils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -476,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F527E724215495007A8B4E /* UIViewController+Instances.swift in Sources */,
+				49411604242243EE002403E4 /* PLPWebService.swift in Sources */,
 				49F527F62421AB7E007A8B4E /* SearchHistoryPersistenceProtocol.swift in Sources */,
 				49F527EF2421A15C007A8B4E /* SearchCell.swift in Sources */,
 				49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */,
@@ -486,13 +523,16 @@
 				49F527F42421AB22007A8B4E /* SearchHistoryKeyedArchiver.swift in Sources */,
 				49F5280C24221C21007A8B4E /* Manager.swift in Sources */,
 				49F527F82421B162007A8B4E /* SearchHistoryData.swift in Sources */,
+				4941160824225620002403E4 /* UIImageView+Utils.swift in Sources */,
 				49F5281424223831007A8B4E /* UIView+Utils.swift in Sources */,
 				49F527FE2421F317007A8B4E /* PLPViewController.swift in Sources */,
 				49F52808242215D1007A8B4E /* PLP.swift in Sources */,
+				4941160A24227477002403E4 /* PDPViewController.swift in Sources */,
 				49571D5C242129DD0050E6C5 /* SearchViewController.swift in Sources */,
 				49F527F22421A96F007A8B4E /* SearchHistoryPersistenceKeyedArchiverObjects.swift in Sources */,
 				49F528002421FB81007A8B4E /* ProductCell.swift in Sources */,
 				49F52806242214B6007A8B4E /* PLPDataProtocol.swift in Sources */,
+				4941160624224AE6002403E4 /* ProductObjectParser.swift in Sources */,
 				49F5280A2422165D007A8B4E /* PLPDataDummy.swift in Sources */,
 				49F5280324220F92007A8B4E /* ProductDataModel.swift in Sources */,
 				49F527FA2421B1BD007A8B4E /* SearchHistoryDataProtocol.swift in Sources */,

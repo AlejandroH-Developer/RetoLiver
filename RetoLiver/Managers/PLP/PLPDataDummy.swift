@@ -10,7 +10,7 @@ import Foundation
 
 class PLPDataDummy: PLPDataProtocol {
     
-    func getPLP(completion: @escaping ((PLPDataResult) -> ())) {
+    func getPLP(criteria: String, completion: @escaping ((PLPDataResult) -> ())) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         
