@@ -9,8 +9,9 @@
 import Foundation
 
 struct ProductDataModel {
-    let id: Int
+    let id: String
     let name: String
-    let normalPrice: Float
-    let lastPrice: Float
+    let imageURL: String
+    let listPrice: Float
+    let promoPrice: Float
 }
