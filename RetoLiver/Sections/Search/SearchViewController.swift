@@ -79,9 +79,6 @@ extension SearchViewController {
         guard let text: String = criteria, !text.isEmpty else { return }
         print("Buscando producto")
         SearchHistoryData.shared.addSearch(text)
-        //SearchHistoryData.shared.saveHistory()
-        //reloadData()
-    
         closeViewController(animated: true) {
             SearchHistoryData.shared.saveHistory()
         }

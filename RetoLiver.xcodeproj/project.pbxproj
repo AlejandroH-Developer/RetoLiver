@@ -151,6 +151,16 @@
 			path = LodingView;
 			sourceTree = "<group>";
 		};
+		4941160224223DB2002403E4 /* PLP */ = {
+			isa = PBXGroup;
+			children = (
+				49F52805242214B6007A8B4E /* PLPDataProtocol.swift */,
+				49F528092422165D007A8B4E /* PLPDataDummy.swift */,
+				49F52807242215D1007A8B4E /* PLP.swift */,
+			);
+			path = PLP;
+			sourceTree = "<group>";
+		};
 		49571D1C24211D200050E6C5 = {
 			isa = PBXGroup;
 			children = (
@@ -265,9 +275,7 @@
 			children = (
 				49F5280B24221C21007A8B4E /* Manager.swift */,
 				49F5280424221492007A8B4E /* SearchHistory */,
-				49F52805242214B6007A8B4E /* PLPDataProtocol.swift */,
-				49F528092422165D007A8B4E /* PLPDataDummy.swift */,
-				49F52807242215D1007A8B4E /* PLP.swift */,
+				4941160224223DB2002403E4 /* PLP */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
