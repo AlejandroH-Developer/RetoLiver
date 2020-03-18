@@ -29,6 +29,11 @@
 		49F527FE2421F317007A8B4E /* PLPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527FD2421F317007A8B4E /* PLPViewController.swift */; };
 		49F528002421FB81007A8B4E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F527FF2421FB81007A8B4E /* ProductCell.swift */; };
 		49F5280324220F92007A8B4E /* ProductDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280224220F92007A8B4E /* ProductDataModel.swift */; };
+		49F52806242214B6007A8B4E /* PLPDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F52805242214B6007A8B4E /* PLPDataProtocol.swift */; };
+		49F52808242215D1007A8B4E /* PLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F52807242215D1007A8B4E /* PLP.swift */; };
+		49F5280A2422165D007A8B4E /* PLPDataDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F528092422165D007A8B4E /* PLPDataDummy.swift */; };
+		49F5280C24221C21007A8B4E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280B24221C21007A8B4E /* Manager.swift */; };
+		49F5280E242221D0007A8B4E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */; };
 		7960E5621A091E8AADAE1AED /* Pods_RetoLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1385E21A96206608B4063228 /* Pods_RetoLiver.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +84,11 @@
 		49F527FD2421F317007A8B4E /* PLPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPViewController.swift; sourceTree = "<group>"; };
 		49F527FF2421FB81007A8B4E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		49F5280224220F92007A8B4E /* ProductDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataModel.swift; sourceTree = "<group>"; };
+		49F52805242214B6007A8B4E /* PLPDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPDataProtocol.swift; sourceTree = "<group>"; };
+		49F52807242215D1007A8B4E /* PLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLP.swift; sourceTree = "<group>"; };
+		49F528092422165D007A8B4E /* PLPDataDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLPDataDummy.swift; sourceTree = "<group>"; };
+		49F5280B24221C21007A8B4E /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		4F1ADBB7AC331019E5490B64 /* Pods-RetoLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.debug.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.debug.xcconfig"; sourceTree = "<group>"; };
 		C767FF0748008C6E8E808702 /* Pods-RetoLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetoLiver.release.xcconfig"; path = "Target Support Files/Pods-RetoLiver/Pods-RetoLiver.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +210,7 @@
 			children = (
 				49F527E624215495007A8B4E /* UIViewController+Instances.swift */,
 				49F527E9242179A4007A8B4E /* UITextField+Placeholder.swift */,
+				49F5280D242221D0007A8B4E /* UIViewController+Alert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -235,8 +246,11 @@
 		49F527FC2421BCB0007A8B4E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				49F527F72421B162007A8B4E /* SearchHistoryData.swift */,
-				49F527F92421B1BD007A8B4E /* SearchHistoryDataProtocol.swift */,
+				49F5280B24221C21007A8B4E /* Manager.swift */,
+				49F5280424221492007A8B4E /* SearchHistory */,
+				49F52805242214B6007A8B4E /* PLPDataProtocol.swift */,
+				49F528092422165D007A8B4E /* PLPDataDummy.swift */,
+				49F52807242215D1007A8B4E /* PLP.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -248,6 +262,15 @@
 				49F527FF2421FB81007A8B4E /* ProductCell.swift */,
 			);
 			path = PLP;
+			sourceTree = "<group>";
+		};
+		49F5280424221492007A8B4E /* SearchHistory */ = {
+			isa = PBXGroup;
+			children = (
+				49F527F72421B162007A8B4E /* SearchHistoryData.swift */,
+				49F527F92421B1BD007A8B4E /* SearchHistoryDataProtocol.swift */,
+			);
+			path = SearchHistory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,13 +455,18 @@
 				49571D2924211D200050E6C5 /* AppDelegate.swift in Sources */,
 				49571D2B24211D200050E6C5 /* SceneDelegate.swift in Sources */,
 				49F527EA242179A4007A8B4E /* UITextField+Placeholder.swift in Sources */,
+				49F5280E242221D0007A8B4E /* UIViewController+Alert.swift in Sources */,
 				49571D59242127640050E6C5 /* SplashViewController.swift in Sources */,
 				49F527F42421AB22007A8B4E /* SearchHistoryKeyedArchiver.swift in Sources */,
+				49F5280C24221C21007A8B4E /* Manager.swift in Sources */,
 				49F527F82421B162007A8B4E /* SearchHistoryData.swift in Sources */,
 				49F527FE2421F317007A8B4E /* PLPViewController.swift in Sources */,
+				49F52808242215D1007A8B4E /* PLP.swift in Sources */,
 				49571D5C242129DD0050E6C5 /* SearchViewController.swift in Sources */,
 				49F527F22421A96F007A8B4E /* SearchHistoryPersistenceKeyedArchiverObjects.swift in Sources */,
 				49F528002421FB81007A8B4E /* ProductCell.swift in Sources */,
+				49F52806242214B6007A8B4E /* PLPDataProtocol.swift in Sources */,
+				49F5280A2422165D007A8B4E /* PLPDataDummy.swift in Sources */,
 				49F5280324220F92007A8B4E /* ProductDataModel.swift in Sources */,
 				49F527FA2421B1BD007A8B4E /* SearchHistoryDataProtocol.swift in Sources */,
 				49F527EC24217DC5007A8B4E /* SearchDataModel.swift in Sources */,
