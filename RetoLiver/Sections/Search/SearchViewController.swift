@@ -79,12 +79,12 @@ extension SearchViewController {
         guard let text: String = criteria, !text.isEmpty else { return }
         print("Buscando producto")
         SearchHistoryData.shared.addSearch(text)
-        SearchHistoryData.shared.saveHistory()
-        reloadData()
+        //SearchHistoryData.shared.saveHistory()
+        //reloadData()
     
-        //closeViewController(animated: true) {
-            
-        //prod}
+        closeViewController(animated: true) {
+            SearchHistoryData.shared.saveHistory()
+        }
         
     }
     
@@ -94,7 +94,6 @@ extension SearchViewController {
         SearchHistoryData.shared.removeSearch(text)
         SearchHistoryData.shared.saveHistory()
         reloadData()
-        
     }
     
 }
@@ -104,8 +103,12 @@ extension SearchViewController {
 
 extension SearchViewController {
     
-    @IBAction private func didPressSearchProduct(_ sender: UIButton) {
+    @IBAction private func didPressSearch(_ sender: UIButton) {
         search(textField.text)
+    }
+    
+    @IBAction private func didPressClose(_ sender: UIButton) {
+        closeViewController(animated: true)
     }
     
 }
