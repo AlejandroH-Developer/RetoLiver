@@ -8,9 +8,31 @@
 
 import Foundation
 
+enum PriceType {
+    case list
+    case promo
+}
+
+
 struct ProductDataModel {
-    let id: Int
+    let id: String
     let name: String
-    let normalPrice: Float
-    let lastPrice: Float
+    let imageURL: String
+    let listPrice: Float
+    let promoPrice: Float
+    
+    var priceType: PriceType {
+        
+        if listPrice <= 0 {
+            return .promo
+        }
+        
+        if promoPrice <= 0 {
+            return .list
+        }
+        
+        return listPrice >= promoPrice ? .list : .promo
+        
+    }
+    
 }

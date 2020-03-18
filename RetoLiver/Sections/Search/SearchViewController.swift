@@ -8,6 +8,12 @@
 
 import UIKit
 
+// MARK: - Protocol
+
+protocol SearchControllerDelegate: class {
+    func dismiss()
+}
+
 
 // MARK: - Properties
 
@@ -20,6 +26,8 @@ class SearchViewController: UIViewController {
     
     // Properties
     var searches: [String] = []
+    
+    weak var delegate: SearchControllerDelegate?
 }
 
 
@@ -78,10 +86,8 @@ extension SearchViewController {
     func search(_ criteria: String?) {
         guard let text: String = criteria, !text.isEmpty else { return }
         print("Buscando producto")
+        self.delegate?.dismiss()
         SearchHistoryData.shared.addSearch(text)
-        //SearchHistoryData.shared.saveHistory()
-        //reloadData()
-    
         closeViewController(animated: true) {
             SearchHistoryData.shared.saveHistory()
         }

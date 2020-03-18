@@ -54,7 +54,7 @@ extension SplashViewController {
             self.goToMain()
         }
     }
-    
+
     func goToMain() {
         let navController: UINavigationController = PLPViewController.instanceFromStoryboard().addNavigationController()
         self.presentViewController(navController, animated: true)
